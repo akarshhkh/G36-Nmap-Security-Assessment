@@ -1,0 +1,16 @@
+METHODOLOGY SUMMARY
+1. Verify the Nmap installation and version.
+2. Run a TCP connect scan against 127.0.0.1.
+3. Save the scan output as a text file.
+4. Run light service/version detection on the four observed ports.
+5. Compare the Nmap findings with Windows listening-socket, process and service information.
+6. Review Windows Firewall profile status and SMB configuration.
+7. Repeat the localhost scan after enabling the firewall profiles.
+8. Document limitations: no second host was available, so remote reachability was not tested.
+
+EXPECTED NMAP OUTPUT FILES
+- nmap_results.txt
+- nmap_service_verification.txt
+- nmap_after_firewall.txt
+
+IMPORTANT: Include the actual output files generated on your laptop. Do not create fake scan outputs. If they are missing, recreate them by running the commands in README.txt.
