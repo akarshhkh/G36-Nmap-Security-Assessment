@@ -1,0 +1,31 @@
+PowerShell checks used in the practical. Run in Windows PowerShell.
+
+1. Show listeners on the observed ports:
+Get-NetTCPConnection -State Listen |
+  Where-Object { $_.LocalPort -in 135,445,1042,7778 } |
+  Select-Object LocalAddress, LocalPort, State, OwningProcess
+
+2. Identify selected processes (process IDs can change between sessions):
+Get-Process -Id 1788,5104,6172 | Select-Object Id, ProcessName
+
+3. Check related services:
+Get-CimInstance Win32_Service |
+  Where-Object { $_.ProcessId -in 1788,5104,6172 } |
+  Select-Object Name, DisplayName, State, ProcessId
+
+4. Check firewall profiles:
+Get-NetFirewallProfile | Select-Object Name, Enabled
+
+5. Check the network profile:
+Get-NetConnectionProfile | Select-Object InterfaceAlias, NetworkCategory, IPv4Connectivity
+
+6. Check the Server service:
+Get-Service LanmanServer
+
+7. Check SMB protocol configuration:
+Get-SmbServerConfiguration | Select-Object EnableSMB1Protocol, EnableSMB2Protocol
+
+8. List SMB shares:
+Get-SmbShare | Select-Object Name, Path, Description
+
+Note: Process IDs may change after restarting Windows or applications. Use current IDs from the listener output if needed.
