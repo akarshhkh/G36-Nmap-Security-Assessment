@@ -37,8 +37,8 @@ OBSERVED RESULTS (16 OCTOBER 2026)
 - Firewall profiles were later verified as enabled for Domain, Private and Public.
 - The repeated localhost scan returned the same four open ports.
 
-GITHUB LINK
-No GitHub repository link was provided for this project. If you have a repository, add its real URL here. Do not invent a link. If the project is not on GitHub, this README and the included source/evidence files provide the local execution instructions.
+GITHUB LINK: https://github.com/akarshhkh/G36-Nmap-Security-Assessment
+
 
 CONTENTS
 scan_results/     Saved Nmap output files (copy the actual .txt outputs here if they are not already included)
