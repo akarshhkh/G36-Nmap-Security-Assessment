@@ -1,0 +1,20 @@
+# Nmap 7.992 scan initiated Fri Oct 16 19:35:54 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.exe" -sT -Pn -sV --version-light -p 135,445,1042,7778 -oN nmap_service_verification.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00076s latency).
+
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+1042/tcp open  afrog?
+7778/tcp open  interwise?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1042-TCP:V=7.992%I=2%D=10/16%Time=6AD22F50%P=i686-pc-windows-window
+SF:s%r(GetRequest,6A,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\
+SF:x2016\x20Oct\x202026\x2014:06:08\x20GMT\r\nConnection:\x20close\r\n\r\n
+SF:{\"errorCode\":\"F-1034\"}")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TLSSessionReq,2F,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 16 19:36:09 2026 -- 1 IP address (1 host up) scanned in 14.67 seconds
